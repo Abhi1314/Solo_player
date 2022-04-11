@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:layout_height="match_parent"
+    tools:context=".Player_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="634dp"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txsong_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="7dp"
+            android:singleLine="true"
+            android:text="Song_name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="italic"></TextView>
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="257dp"
+            android:layout_height="246dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:src="@drawable/musicx">
+
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="20dp"
+                android:layout_marginBottom="40dp">
+
+            </androidx.appcompat.widget.AppCompatSeekBar>
+
+            <TextView
+                android:id="@+id/txtsstart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="false"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toLeftOf="@+id/seekbar"
+                android:text="0:10"
+                android:textColor="@color/white"
+                android:textSize="14sp"></TextView>
+
+            <TextView
+                android:id="@+id/txtsstop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="false"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/seekbar"
+                android:text="4:10"
+                android:textColor="@color/white"
+                android:textSize="14sp"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_weight="7">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/play"
+                android:layout_width="58dp"
+                android:layout_marginTop="12dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="142dp"
+                android:background="@drawable/pause">
+            </Button>
+            <Button
+                android:id="@+id/next"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/play"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="142dp"
+                android:background="@drawable/next">
+            </Button>
+            <Button
+                android:id="@+id/previous"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@+id/play"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="142dp"
+                android:background="@drawable/previous">
+            </Button>
+            <Button
+                android:id="@+id/nextff"
+                android:layout_toRightOf="@+id/next"
+                android:layout_width="40dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/forward"
+                android:layout_height="40dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/repeat"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="57dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/next"
+                android:background="@drawable/repeat_24">
+
+            </Button>
+
+            <Button
+                android:id="@+id/rewind"
+                android:layout_toLeftOf="@+id/previous"
+                android:layout_width="40dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rewind"
+                android:layout_height="40dp">
+
+            </Button>
+            <com.gauravk.audiovisualizer.visualizer.BarVisualizer
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/bar"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                custom:avDensity="0.5"
+                custom:avType="outline"
+                custom:avWidth="4dp"
+                custom:avColor="#FF362E"
+                custom:avSpeed="normal"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
