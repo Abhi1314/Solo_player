@@ -1,5 +1,4 @@
 # Solo_player
-Music_player
-This is an android app music player and nearly clone of google music 
+Music_player an android app and nearly clone of google music 
 and it used for listening song little bit animation is there
-and this intermediate level app and develop in java use it explore it.
+and this is intermediate level app and develop in java use it explore it.
